@@ -16,8 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".BulldogListActivity" />
         <activity android:name=".BulldogActivity" />
+=======
+        <activity android:name=".BulldogListActivity"></activity>
+>>>>>>> caed3a0a30bef55e50feb1eef867c8856e399f67
     </application>
 
 </manifest>
