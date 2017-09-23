@@ -1,5 +1,6 @@
 package com.malmberg.matthew.beautifulbulldogs;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,12 +15,23 @@ import java.util.ArrayList;
 public class BulldogListActivity extends AppCompatActivity {
 
     private ListView bulldogList;
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class BulldogListActivity extends AppCompatActivity {
+
+    private TextView textView;
+
+>>>>>>> a93806e9dcf89395c779051199380f81163c07b2
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bulldog_list);
 
+<<<<<<< HEAD
         ArrayList<Bulldog> bulldogs = new ArrayList<Bulldog>();
         bulldogList = (ListView) findViewById(R.id.bulldog_list);
 
@@ -46,5 +58,11 @@ public class BulldogListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+=======
+        textView = (TextView) findViewById(R.id.textView);
+
+        String email = getIntent().getStringExtra("email");
+        textView.setText(email);
+>>>>>>> a93806e9dcf89395c779051199380f81163c07b2
     }
 }
