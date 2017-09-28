@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
     private EditText emailField;
     private EditText passwordField;
+    private User newuser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,12 @@ public class LoginActivity extends AppCompatActivity {
                                 realm.copyToRealmOrUpdate(user);
                             }
                         });
+
+                        //Left off here
+                        Intent intent1 = new Intent();
+                        intent1.putExtra("username", username);
+
+                        newuser = realm.where(User.class).equalTo("username", getIntent().getStringExtra("username")).findFirst();
 
                         realm.close();
 

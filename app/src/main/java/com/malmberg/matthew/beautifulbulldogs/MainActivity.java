@@ -15,6 +15,7 @@ import io.realm.Realm;
 public class MainActivity extends AppCompatActivity {
 
     public Realm realm;
+    public User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
