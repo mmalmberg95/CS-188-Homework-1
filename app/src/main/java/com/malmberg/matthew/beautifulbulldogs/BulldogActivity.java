@@ -2,13 +2,19 @@ package com.malmberg.matthew.beautifulbulldogs;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import io.realm.Realm;
 
 public class BulldogActivity extends AppCompatActivity {
 
-    private TextView textView;
+    private TextView Name;
+    private Spinner rating;
+    private Button vote;
+    private ImageView picture;
     private Realm realm;
 
     @Override
@@ -16,14 +22,17 @@ public class BulldogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bulldog);
 
-        textView = (TextView) findViewById(R.id.textView);
+        Name = (TextView) findViewById(R.id.addName);
+        rating = (Spinner) findViewById(R.id.spinner);
+        picture = (ImageView) findViewById(R.id.vote_picture);
+
         realm = Realm.getDefaultInstance();
 
         String id = (String) getIntent().getStringExtra("bulldog");
 
         Bulldog bulldog = realm.where(Bulldog.class).equalTo("id", id).findFirst();
                 /*(Bulldog) getIntent().getSerializableExtra("bulldog");*/
-        textView.setText(bulldog.getName());
+        Name.setText(bulldog.getName());
     }
 
     @Override

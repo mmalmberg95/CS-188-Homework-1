@@ -18,9 +18,9 @@ import io.realm.RealmResults;
 public class BulldogArrayAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mInflater;
-    private RealmResults<Bulldog> mDataSource;
+    private ArrayList<Bulldog> mDataSource;
 
-    public BulldogArrayAdapter(Context context, RealmResults<Bulldog> items){
+    public BulldogArrayAdapter(Context context, ArrayList<Bulldog> items){
         mContext = context;
         mDataSource = items;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
