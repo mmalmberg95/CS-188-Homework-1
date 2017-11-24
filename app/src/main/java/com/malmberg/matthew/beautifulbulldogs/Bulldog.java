@@ -14,15 +14,8 @@ public class Bulldog extends RealmObject {
     private String name;
     private String age;
     public RealmList<Vote> votes;
-    private byte[] image;
+    private byte[] Image;
 
-    public byte[] getimage(){
-        return image;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
 
     public String getName() {
         return name;
@@ -61,6 +54,13 @@ public class Bulldog extends RealmObject {
     }
 
 
+    public byte[] getImage() {
+        return Image;
+    }
+
+    public void setImage(byte[] image) {
+        Image = image;
+    }
 }
 
 

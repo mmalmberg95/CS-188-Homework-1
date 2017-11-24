@@ -29,8 +29,8 @@ public class BulldogListActivity extends AppCompatActivity {
 
 
 
-        BulldogArrayAdapter adapter = new BulldogArrayAdapter(this, realm.where(Bulldog.class).findAll());
-        bulldogList.setAdapter(adapter);
+//        BulldogArrayAdapter adapter = new BulldogArrayAdapter(this, realm.where(Bulldog.class).findAll());
+//        bulldogList.setAdapter(adapter);
 
         bulldogList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override

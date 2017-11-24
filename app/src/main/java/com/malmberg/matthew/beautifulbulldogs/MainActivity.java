@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         realm = Realm.getDefaultInstance();
 
+        username = realm.where(User.class).equalTo("username", getIntent().getStringExtra("username")).findFirst();
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

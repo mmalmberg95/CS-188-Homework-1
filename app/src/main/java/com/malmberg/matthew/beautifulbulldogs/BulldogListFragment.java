@@ -47,7 +47,7 @@ public class BulldogListFragment extends Fragment {
                     final Bulldog bulldog = (Bulldog) adapterView.getItemAtPosition(i);
                     Intent intent = new Intent(view.getContext(), BulldogActivity.class);
                     intent.putExtra("bulldog", bulldog.getId());
-                    intent.putExtra("username", mainActivity.user.getUsername());
+                    intent.putExtra("username", mainActivity.username.getUsername());
                     startActivity(intent);
                 }
             });
@@ -70,7 +70,7 @@ public class BulldogListFragment extends Fragment {
         for (Bulldog bulldog : bulldogs) {
             Boolean isPresent = false;
             for(Vote vote : bulldog.getVotes()) {
-                if(vote.getOwner().getUsername().equals(mainActivity.user.getUsername())) {
+                if(vote.getOwner().getUsername().equals(mainActivity.username.getUsername())) {
                     isPresent = true;
                 }
             }
@@ -78,8 +78,6 @@ public class BulldogListFragment extends Fragment {
                 bulldogs2.add(bulldog);
             }
         }
-
-
         return bulldogs2;
     }
 }
